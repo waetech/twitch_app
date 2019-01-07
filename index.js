@@ -1,14 +1,11 @@
-import { SIGN_IN, SIGN_OUT } from './types';
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import authReducer from './authReducer';
+import streamReducer from './streamReducer';
 
-export const signIn = () => {
-    return {
-        type: SIGN_IN,
-        payload: userId
-    };
-};
 
-export const signOut = () => {
-    return {
-        type: SIGN_OUT
-    };
-};
+export default combineReducers({
+    auth: authReducer,
+    form: formReducer,
+    streams: streamReducer
+});
