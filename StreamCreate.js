@@ -52,7 +52,7 @@ const errors = {};
     if(!formValues.description) {
         errors.description = "You must enter a description";
     }
-    return errors;
+    return formValues;
 };
 
 const formWrapped = reduxForm({
