@@ -52,6 +52,8 @@ const errors = {};
     if(!formValues.description) {
         errors.description = "You must enter a description";
     }
+    //New change from errors to formValues
+    //Streams were not showing up 
     return formValues;
 };
 
